@@ -88,7 +88,7 @@ namespace InviduelltProjektDB
         {
 
             SqlConnection sqlCon1 = new SqlConnection(@"Data Source = DESKTOP-6TSF82P; Initial Catalog = IndividuelltDatabasprojekt; Integrated Security = True");
-            SqlDataAdapter sqlda = new SqlDataAdapter("select * from AvdelningAnställda", sqlCon1);//Uses a stored procedure with the name "AvdelningAnställda"
+            SqlDataAdapter sqlda = new SqlDataAdapter("select * from AvdelningAnställda", sqlCon1);//Uses a stored view with the name "AvdelningAnställda"
             DataTable dtbl = new DataTable();
             sqlda.Fill(dtbl);
 
